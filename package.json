@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "process-inbox": "node scripts/process-inbox.mjs",
+    "generate-proposal": "node scripts/generate-proposal.mjs",
     "test": "node --test tests/*.test.mjs"
   }
 }
