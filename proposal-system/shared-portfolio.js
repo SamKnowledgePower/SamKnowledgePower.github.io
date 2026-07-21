@@ -13,7 +13,7 @@
     document.querySelectorAll('[data-shared-portfolio]').forEach((root) => {
       const limit = Number(root.dataset.limit || data.items.length);
       root.innerHTML = data.items.slice(0, limit).map((item) => `
-        <article class="shared-portfolio-card" data-video-id="${item.id}">
+        <article class="shared-portfolio-card${item.layout === 'landscape' ? ' is-landscape' : ''}" data-video-id="${item.id}">
           <img src="https://samknowledgepower.github.io${item.image}" alt="${item.title}" loading="lazy">
           <div class="shared-portfolio-overlay"><div class="shared-portfolio-views">◉ ${item.viewsLabel}</div><div class="shared-portfolio-title">${item.title}</div>${item.evidenceDate ? `<div class="shared-portfolio-date">數據截圖：${item.evidenceDate}</div>` : ''}</div>
         </article>`).join('');

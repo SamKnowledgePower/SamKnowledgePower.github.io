@@ -14,6 +14,7 @@ test('central portfolio totals match every work item', async () => {
   assert.equal(data.items.length, data.summary.workCount);
   assert.equal(data.items.reduce((sum, item) => sum + item.views, 0), data.summary.totalViews);
   assert.equal(Math.max(...data.items.map((item) => item.views)), 570000);
+  assert.deepEqual(data.items.filter((item) => item.layout === 'landscape').map((item) => item.id).sort(), ['braised-pork', 'milkfish']);
 });
 
 test('page has responsive viewport and data containers', async () => {
