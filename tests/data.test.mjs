@@ -9,6 +9,13 @@ for (const file of ['videos.json', 'metrics.json']) {
   });
 }
 
+test('central portfolio totals match every work item', async () => {
+  const data = JSON.parse(await readFile(new URL('../data/portfolio.json', import.meta.url), 'utf8'));
+  assert.equal(data.items.length, data.summary.workCount);
+  assert.equal(data.items.reduce((sum, item) => sum + item.views, 0), data.summary.totalViews);
+  assert.equal(Math.max(...data.items.map((item) => item.views)), 570000);
+});
+
 test('page has responsive viewport and data containers', async () => {
   const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
   assert.match(html, /name="viewport"/);

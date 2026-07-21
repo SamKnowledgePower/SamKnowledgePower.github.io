@@ -1,0 +1,22 @@
+{
+  "updatedAt": "2026-07-21",
+  "summary": {"totalViews": 1528004, "totalViewsLabel": "152萬+", "topViewsLabel": "57萬", "secondViewsLabel": "28萬", "thirdViewsLabel": "24萬", "workCount": 16},
+  "items": [
+    {"id":"watermelon-reception-new-generation","category":"農業品牌","title":"和豐會客室｜新生代盤商，閒瓜無數","views":570000,"viewsLabel":"57萬","image":"/assets/portfolio/watermelon-reception-new-generation-57w.png","evidenceDate":"2026-07-21"},
+    {"id":"braised-pork","category":"知識內容","title":"我退休的爸爸把商用滷肉飯配方公布了（YouTube）","views":280000,"viewsLabel":"28萬","image":"/assets/portfolio/braised-pork.jpg"},
+    {"id":"watermelon-stamp-master","category":"農業品牌","title":"西瓜蓋章師｜陳師傅","views":240000,"viewsLabel":"24萬","image":"/assets/portfolio/watermelon-stamp-master-24w.png","evidenceDate":"2026-07-21"},
+    {"id":"watermelon-day43","category":"農業品牌","title":"DAY 43｜西瓜期中考","views":89000,"viewsLabel":"8.9萬","image":"/assets/portfolio/watermelon-day43-8.9w.png","evidenceDate":"2026-07-21"},
+    {"id":"watermelon-day44","category":"農業品牌","title":"DAY 44｜西瓜博士團 吳班長","views":82000,"viewsLabel":"8.2萬","image":"/assets/portfolio/watermelon-day44-8.2w.png","evidenceDate":"2026-07-21"},
+    {"id":"watermelon-day45","category":"農業品牌","title":"DAY 45｜吳班長沉浸式留瓜教學","views":60000,"viewsLabel":"6萬","image":"/assets/portfolio/watermelon-day45-6w.png","evidenceDate":"2026-07-21"},
+    {"id":"milkfish","category":"知識內容","title":"台南人必備技能：煎虱目魚肚（YouTube）","views":58000,"viewsLabel":"5.8萬","image":"/assets/portfolio/milkfish.jpg"},
+    {"id":"watermelon-tour-bus","category":"農業品牌","title":"直播帶貨始祖｜遊覽車工商","views":51000,"viewsLabel":"5.1萬","image":"/assets/portfolio/watermelon-tour-bus.jpg"},
+    {"id":"watermelon-reception-score","category":"農業品牌","title":"和豐會客室｜新生代盤商給和豐西瓜幾分？","views":26000,"viewsLabel":"2.6萬","image":"/assets/portfolio/watermelon-reception-score-2.6w.png","evidenceDate":"2026-07-21"},
+    {"id":"watermelon-0-to-100","category":"農業品牌","title":"西瓜 0 到 100 天｜每個細節都重要","views":24000,"viewsLabel":"2.4萬","image":"/assets/portfolio/watermelon-0-to-100-2.4w.png","evidenceDate":"2026-07-21"},
+    {"id":"watermelon-second-generation","category":"農業品牌","title":"農二代沒這麼好當","views":22000,"viewsLabel":"2.2萬","image":"/assets/portfolio/watermelon-second-generation-2.2w.png","evidenceDate":"2026-07-21"},
+    {"id":"watermelon-shoes","category":"農業品牌","title":"鞋子長保如新的秘方","views":12000,"viewsLabel":"1.2萬","image":"/assets/portfolio/watermelon-shoes-1.2w.png","evidenceDate":"2026-07-21"},
+    {"id":"bakery-intro","category":"烘焙品牌","title":"Blessings Bakery 酸麵包入門款","views":4606,"viewsLabel":"4,606","image":"/assets/portfolio/bakery-intro.jpg"},
+    {"id":"bakery-testimonial","category":"烘焙品牌","title":"客戶見證｜親朋好友分享","views":4452,"viewsLabel":"4,452","image":"/assets/portfolio/bakery-testimonial.jpg"},
+    {"id":"bakery-natural","category":"烘焙品牌","title":"吃的都是最天然的","views":3124,"viewsLabel":"3,124","image":"/assets/portfolio/bakery-natural.jpg"},
+    {"id":"bakery-health","category":"烘焙品牌","title":"吃好的食物，身體會回饋健康給你","views":1822,"viewsLabel":"1,822","image":"/assets/portfolio/bakery-health.jpg"}
+  ]
+}

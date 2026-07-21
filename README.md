@@ -16,6 +16,10 @@
 - `metrics.json`：成效數據，欄位為 `value`、`label`、`pending`
 - `clients/`：經驗證的客戶／案例 JSON
 - `inbox/`：新客戶資料入口；推送後由 Actions 驗證並移入 `clients/`
+- `data/portfolio.json`：所有提案共用的作品、觀看數與更新日期；這是唯一的作品數據來源
+- `proposal-system/projects/`：每位新客戶一份設定檔
+- `proposal-system/templates/`：可重複使用的提案頁模板
+- `proposal-system/shared-portfolio.js`：讓既有與未來提案同步讀取中央作品資料
 
 修改後可直接提交至 `main`，`Test and deploy Pages` workflow 會先測試再發布。
 
@@ -40,6 +44,28 @@ npm run process-inbox
 2. 填寫 `slug`、`name`、`summary`、`status`。
 3. 請勿寫入機密或未授權公開的個資。
 4. 提交至 `main`；workflow 驗證後會建立 `clients/<slug>.json` 並自動提交。
+
+## 建立新客戶提案
+
+1. 複製 `proposal-system/projects/_example.json`，檔名改為客戶英文代號。
+2. 填入客戶名稱、專案名稱、需求摘要、服務、報價與合作期間。
+3. 執行：
+
+```sh
+npm run generate-proposal -- proposal-system/projects/client-name.json
+```
+
+4. 新頁面會產生在 `proposals/client-name/index.html`，推送後網址為 `https://samknowledgepower.github.io/proposals/client-name/`。
+
+提案中的作品區塊會即時讀取 `data/portfolio.json`。日後只要更新一次中央資料，所有使用共用元件的提案都會顯示最新觀看數，不必逐頁修改。
+
+## 上傳新流量截圖
+
+將截圖交給 Codex，並盡量附上截圖日期。系統會依封面、標題和現有 `id` 判斷：
+
+- 同一支影片：更新觀看數、圖片和 `evidenceDate`
+- 新影片：新增一筆資料並更新總觀看數、最高觀看與作品數
+- 無法可靠辨識：先標記待確認，不覆蓋既有資料
 
 ## 待補資料
 
