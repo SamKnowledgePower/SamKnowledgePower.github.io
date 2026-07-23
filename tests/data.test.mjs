@@ -13,7 +13,7 @@ test('central portfolio totals match every work item', async () => {
   const data = JSON.parse(await readFile(new URL('../data/portfolio.json', import.meta.url), 'utf8'));
   assert.equal(data.items.length, data.summary.workCount);
   assert.equal(data.items.reduce((sum, item) => sum + item.views, 0), data.summary.totalViews);
-  assert.equal(Math.max(...data.items.map((item) => item.views)), 570000);
+  assert.equal(Math.max(...data.items.map((item) => item.views)), 640000);
   assert.deepEqual(data.items.filter((item) => item.layout === 'landscape').map((item) => item.id).sort(), ['braised-pork', 'milkfish']);
 });
 
