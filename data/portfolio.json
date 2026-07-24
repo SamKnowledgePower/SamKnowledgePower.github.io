@@ -1,6 +1,25 @@
 {
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-07-24",
   "summary": {"totalViews": 1608004, "totalViewsLabel": "160萬+", "topViewsLabel": "64萬", "secondViewsLabel": "28萬", "thirdViewsLabel": "25萬", "workCount": 16},
+  "campaignEvidence": [
+    {
+      "id": "watermelon-facebook-90day-performance",
+      "title": "和豐西瓜 Facebook 90 天代操成效",
+      "period": "2026-04-25 至 2026-07-23",
+      "summary": "90 天累積 1,384,199 次瀏覽，單篇最高 670,687 次觀看。",
+      "metrics": [
+        {"value":"1,384,199","label":"瀏覽次數","change":"+17,863%"},
+        {"value":"738,867","label":"觀看 3 秒以上","change":"+22,768%"},
+        {"value":"228,005","label":"觀看 1 分鐘以上","change":"+292,214%"},
+        {"value":"496天2小時","label":"觀看時間","change":"+77,829%"}
+      ],
+      "images": [
+        {"src":"/assets/portfolio/facebook-90day-overview-20260724.png","alt":"和豐西瓜 Facebook 過去 90 天整體瀏覽與觀看成效"},
+        {"src":"/assets/portfolio/facebook-90day-top-posts-20260724.png","alt":"和豐西瓜 Facebook 過去 90 天瀏覽次數最多貼文"}
+      ],
+      "evidenceDate": "2026-07-24"
+    }
+  ],
   "items": [
     {"id":"watermelon-reception-new-generation","category":"農業品牌","title":"和豐會客室｜新生代盤商，閒瓜無數","views":640000,"viewsLabel":"64萬","image":"/assets/portfolio/watermelon-reception-new-generation-64w.png","evidenceDate":"2026-07-23"},
     {"id":"braised-pork","category":"知識內容","title":"我退休的爸爸把商用滷肉飯配方公布了（YouTube）","views":280000,"viewsLabel":"28萬","image":"/assets/portfolio/braised-pork.jpg","layout":"landscape"},
