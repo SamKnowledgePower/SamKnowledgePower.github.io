@@ -7,6 +7,7 @@
 - 作品集：<https://samknowledgepower.github.io/>
 - Gym Proposal：<https://samknowledgepower.github.io/gym-proposal/>
 - 石雕藝術季：<https://samknowledgepower.github.io/stone-carving-art/>
+- General Portfolio：<https://samknowledgepower.github.io/general-portfolio/>
 
 ## 更新內容
 
