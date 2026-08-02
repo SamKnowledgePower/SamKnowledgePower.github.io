@@ -17,7 +17,7 @@ test('central portfolio totals match every work item', async () => {
   assert.equal(data.summary.topViewsLabel, `${highestViews / 10000}萬`);
   assert.deepEqual(data.items.filter((item) => item.layout === 'landscape').map((item) => item.id).sort(), ['braised-pork', 'milkfish']);
   assert.equal(data.campaignEvidence.length, 1);
-  assert.equal(data.campaignEvidence[0].metrics[0].value, '1,384,199');
+  assert.equal(data.campaignEvidence[0].metrics[0].value, '1,489,740');
   assert.equal(data.campaignEvidence[0].images.length, 2);
 });
 
