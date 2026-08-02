@@ -2,6 +2,9 @@
   const SITE_ORIGIN = new URL(document.currentScript.src).origin;
   const DATA_URL = `${SITE_ORIGIN}/data/portfolio.json`;
   const fields = { total: 'totalViewsLabel', top: 'topViewsLabel', second: 'secondViewsLabel', third: 'thirdViewsLabel', count: 'workCount' };
+  const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (character) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+  })[character]);
   try {
     const response = await fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' });
     if (!response.ok) throw new Error(`Portfolio data ${response.status}`);
@@ -13,11 +16,20 @@
     document.querySelectorAll('[data-portfolio-updated]').forEach((node) => { node.textContent = data.updatedAt; });
     document.querySelectorAll('[data-shared-portfolio]').forEach((root) => {
       const limit = Number(root.dataset.limit || data.items.length);
-      const videoCards = data.items.slice(0, limit).map((item) => `
+      const videoCards = data.items.slice(0, limit).map((item) => {
+        const videos = item.videos || [];
+        const imageUrl = item.imageUrl || `${SITE_ORIGIN}${item.image}`;
+        const media = `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.title)}" loading="lazy" decoding="async">${videos.length ? '<span class="shared-portfolio-play" aria-hidden="true">▶</span>' : ''}`;
+        const linkedMedia = videos.length
+          ? `<a class="shared-portfolio-media" href="${escapeHtml(videos[0].url)}" target="_blank" rel="noopener noreferrer" aria-label="觀看${escapeHtml(item.title)}影片">${media}</a>`
+          : `<div class="shared-portfolio-media">${media}</div>`;
+        const videoLinks = videos.length > 1 ? `<div class="shared-portfolio-links">${videos.map((video, index) => `<a href="${escapeHtml(video.url)}" target="_blank" rel="noopener noreferrer">影片 ${index + 1} ↗</a>`).join('')}</div>` : '';
+        return `
         <article class="shared-portfolio-card${item.layout === 'landscape' ? ' is-landscape' : ''}" data-video-id="${item.id}">
-          <img src="${SITE_ORIGIN}${item.image}" alt="${item.title}" loading="lazy">
-          <div class="shared-portfolio-overlay"><div class="shared-portfolio-views">◉ ${item.viewsLabel}</div><div class="shared-portfolio-title">${item.title}</div>${item.evidenceDate ? `<div class="shared-portfolio-date">數據截圖：${item.evidenceDate}</div>` : ''}</div>
-        </article>`).join('');
+          ${linkedMedia}
+          <div class="shared-portfolio-overlay"><div class="shared-portfolio-views">◉ ${escapeHtml(item.viewsLabel)}</div><div class="shared-portfolio-title">${escapeHtml(item.title)}</div>${item.evidenceDate ? `<div class="shared-portfolio-date">觀看數更新：${escapeHtml(item.evidenceDate)}</div>` : ''}${videoLinks}</div>
+        </article>`;
+      }).join('');
       const campaignCards = (data.campaignEvidence || []).map((campaign) => `
         <article class="shared-performance-card" data-campaign-id="${campaign.id}">
           <div class="shared-performance-kicker">整體代操成效｜${campaign.period}</div>

@@ -50,4 +50,3 @@ async function renderVideos() {
 
 $('#year').textContent = new Date().getFullYear();
 renderMetrics();
-renderVideos();
